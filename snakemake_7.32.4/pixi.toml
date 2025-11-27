@@ -1,0 +1,11 @@
+[workspace]
+authors = ["JohGi <tjohanna.girodolle@gmail.com>"]
+channels = ["conda-forge", "bioconda"]
+name = "snakemake_7.32.4"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+snakemake = "7.32.4.*"
