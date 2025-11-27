@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#set -euo pipefail
+
+REAL_PIXI="$HOME/.pixi/bin/pixi"
+EXP_REPO="pixi-projects"
+
+git_root="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+repo_name="$(basename "$git_root" 2>/dev/null || true)"
+
+# execute Pixi normally if we're not in the expected repo or if the command is not 'pixi add'
+if [[ -z "$git_root" ]] || [[ "$repo_name" != "$EXP_REPO" ]] || [[ "${1:-}" != "add" ]] ; then
+  exec "$REAL_PIXI" "$@"
+fi
+
+# else execute the pixi add and commit the changes
+pixi_out="$("$REAL_PIXI" "$@" 2>&1)"
+status=$?
+echo "$pixi_out"
+if [[ $status -ne 0 ]]; then exit $status; fi
+
+pixi_out="${pixi_out:2}"
+pixi_out="${pixi_out/Added/add}"
+git add pixi.toml pixi.lock
+git commit -m "feat: $pixi_out"
