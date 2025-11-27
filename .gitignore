@@ -1,0 +1,20 @@
+# Ignore Pixi environments (binaries, libraries, caches)
+**/.pixi/
+**/pixi.lock.bak
+**/pixi.toml.bak
+
+# VSCode, PyCharm, etc. (si jamais tu édites du code)
+.vscode/
+.idea/
+
+# Python cache (si tu as des scripts dans ces envs)
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Mac / Linux / Windows trash files
+.DS_Store
+Thumbs.db
+
+# Logs temporaires éventuels
+*.log
