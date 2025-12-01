@@ -22,3 +22,4 @@ pixi_out="${pixi_out:2}"
 pixi_out="${pixi_out/Added/add}"
 git add pixi.toml pixi.lock
 git commit -m "feat: $pixi_out"
+git push
