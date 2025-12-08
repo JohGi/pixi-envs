@@ -2,7 +2,7 @@
 #set -euo pipefail
 
 REAL_PIXI="$HOME/.pixi/bin/pixi"
-EXP_REPO="pixi-projects"
+EXP_REPO="pixi-envs"
 
 git_root="$(git rev-parse --show-toplevel 2>/dev/null || true)"
 repo_name="$(basename "$git_root" 2>/dev/null || true)"
