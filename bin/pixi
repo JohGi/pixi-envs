@@ -7,8 +7,8 @@ EXP_REPO="pixi-projects"
 git_root="$(git rev-parse --show-toplevel 2>/dev/null || true)"
 repo_name="$(basename "$git_root" 2>/dev/null || true)"
 
-# execute Pixi normally if we're not in the expected repo or if the command is not 'pixi add'
-if [[ -z "$git_root" ]] || [[ "$repo_name" != "$EXP_REPO" ]] || [[ "${1:-}" != "add" ]] ; then
+# execute Pixi normally if we're not in the expected repo or if the command is not 'pixi add/remove'
+if [[ -z "$git_root" ]] || [[ "$repo_name" != "$EXP_REPO" ]] || { [[ "${1:-}" != "add" ]] && [[ "${1:-}" != "remove" ]]; } ; then
   exec "$REAL_PIXI" "$@"
 fi
 
@@ -20,6 +20,7 @@ if [[ $status -ne 0 ]]; then exit $status; fi
 
 pixi_out="${pixi_out:2}"
 pixi_out="${pixi_out/Added/add}"
+pixi_out="${pixi_out/Removed/remove}"
 git add pixi.toml pixi.lock
 git commit -m "feat: $pixi_out"
 git push
