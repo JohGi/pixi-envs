@@ -9,4 +9,3 @@ version = "0.1.0"
 
 [dependencies]
 egglib = ">=3.5.2,<4"
-matplotlib = ">=3.10.8,<4"
