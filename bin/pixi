@@ -18,9 +18,9 @@ status=$?
 echo "$pixi_out"
 if [[ $status -ne 0 ]]; then exit $status; fi
 
-pixi_out="${pixi_out:2}"
-pixi_out="${pixi_out/Added/add}"
-pixi_out="${pixi_out/Removed/remove}"
+pixi_out="${pixi_out//$'\n'/, }"
+pixi_out="${pixi_out//✔ Added/add}"
+pixi_out="${pixi_out//✔ Removed/remove}"
 git add pixi.toml pixi.lock
 git commit -m "feat: $pixi_out"
 git push
