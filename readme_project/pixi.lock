@@ -291,6 +291,7 @@ environments:
       - conda: https://conda.anaconda.org/bioconda/linux-64/probconsrna-1.10-h9f5acd7_4.tar.bz2
       - conda: https://conda.anaconda.org/bioconda/linux-64/proda-1.0-h503566f_7.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pthread-stubs-0.4-hb9d3cd8_1002.conda
+      - conda: https://conda.anaconda.org/bioconda/linux-64/pyfastx-2.1.0-py312he57d009_3.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pymongo-4.16.0-py312h1289d80_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/python-3.12.3-hab00c5b_0_cpython.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/python-gil-3.12.12-hd8ed1ab_2.conda
@@ -3466,6 +3467,18 @@ packages:
   license_family: MIT
   size: 8252
   timestamp: 1726802366959
+- conda: https://conda.anaconda.org/bioconda/linux-64/pyfastx-2.1.0-py312he57d009_3.tar.bz2
+  sha256: ddf5ac1a43188eaf7650efc8016c49f2d2011e17c428b84f259fa3895e77ad9f
+  md5: c42052f0eb57f7deb2eeac12cc28437f
+  depends:
+  - libgcc-ng >=12
+  - libzlib >=1.2.13,<2.0a0
+  - python >=3.12,<3.13.0a0
+  - python_abi 3.12.* *_cp312
+  license: MIT
+  license_family: MIT
+  size: 141603
+  timestamp: 1720643918784
 - conda: https://conda.anaconda.org/conda-forge/linux-64/pymongo-4.16.0-py312h1289d80_0.conda
   sha256: c4e8f34bff400c94181e81d04ef54951cc862e97b6d10f7e7f4c3ea65da9a632
   md5: 1b10774052fd891e846adf20bc02f839
