@@ -1,0 +1,12 @@
+[workspace]
+authors = ["JohGi <tjohanna.girodolle@gmail.com>"]
+channels = ["conda-forge", "bioconda"]
+name = "readme_project"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+mash = ">=2.3,<3"
+mashtree = ">=1.4.6,<2"
