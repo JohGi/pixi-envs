@@ -10,3 +10,4 @@ version = "0.1.0"
 [dependencies]
 mash = ">=2.3,<3"
 mashtree = ">=1.4.6,<2"
+samtools = ">=1.21,<2"
