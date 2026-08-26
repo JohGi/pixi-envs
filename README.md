@@ -1,7 +1,7 @@
 ## Install Pixi
 ```
 curl -fsSL https://pixi.sh/install.sh | sh
-source .bashrc
+source ~/.bashrc
 ```
 
 ## Pixi environments dl and set-up
