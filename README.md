@@ -7,7 +7,7 @@ source .bashrc
 ## Pixi environments dl and set-up
 Clone the repo:
 ```
-git clone git@github.com:JohGi/pixi-envs.git
+git clone https://github.com/JohGi/pixi-envs.git
 ```
 
 Add the wrapper to your PATH (before the real Pixi path) in your .bashrc, to have in this order (adapt to fit your own paths):
